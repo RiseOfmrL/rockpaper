@@ -14,22 +14,39 @@
     <p>Pick Rock, Paper, Or Scissors.</p>
     <p id="comp"></p>
     <p id="win"></p>
+    <p>Your wins:</p>
+    <p id="numuserwins"></p>
+    <p>Computer wins:</p>
+    <p id="numcompwins"></p>
 
+
+    <button onclick = "Game()" > Click Me To Try Again </button>
 
 <script>
 
-const userSelection = prompt("Welcome to my Rock Paper Scissors game! Pick Rock Paper or Scissors to start playing.")
-const compSelection = Math.random()
+        let userWins = 0
+        numuserwins.textContent = userWins 
+
+        let compWins = 0
+        numcompwins.textContent = compWins
 
     Game()
 
     function Game() {
+
+
+        const userSelection = prompt("Welcome to my Rock Paper Scissors game! Pick Rock Paper or Scissors to start playing.")
+        const compSelection = Math.random()
+
+       
+
 
        let userSelectiontwo = userSelection.toLowerCase() 
        
         console.log(userSelectiontwo)
         
         console.log(compSelection)
+
         
         if (compSelection <= 0.400) {
 
@@ -66,6 +83,9 @@ const compSelection = Math.random()
 
             win.textContent = 
             "You Win!"
+
+            userWins = userWins + 1
+            numuserwins.textContent = userWins 
 
         }
 
@@ -117,9 +137,13 @@ const compSelection = Math.random()
 
         }
 
-        else
+        else{
             win.textContent =
-            "You Lost. Refrest To Try Again."
+            "You Lost."
+
+        }
+
+      
     }
 
 
