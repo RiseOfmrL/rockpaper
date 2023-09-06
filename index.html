@@ -25,7 +25,10 @@ const compSelection = Math.random()
 
     function Game() {
 
-
+       let userSelectiontwo = userSelection.toLowerCase() 
+       
+        console.log(userSelectiontwo)
+        
         console.log(compSelection)
         
         if (compSelection <= 0.400) {
@@ -87,9 +90,36 @@ const compSelection = Math.random()
 
         }
 
+        else if (compSelection <= 0.400 & userSelection === "rock" ) {
+
+        win.textContent = 
+        "You Tied"
+
+
+        }
+
+
+        else if (compSelection  <= 0.700 & compSelection >= 0.4001 & userSelection === "paper" ) {
+
+
+        win.textContent = 
+        "You Tied"
+
+        }
+
+        else if (compSelection <= 1 & compSelection >= 0.7001 & userSelection === "scissors") {
+
+
+        win.textContent = 
+        "You Tied"
+
+
+
+        }
+
         else
             win.textContent =
-            "You Either Tied or Lost Refrest To Try Again."
+            "You Lost. Refrest To Try Again."
     }
 
 
