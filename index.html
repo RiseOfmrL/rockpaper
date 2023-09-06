@@ -18,9 +18,9 @@
 
 <script>
 
-const userSelection = ""
+const userSelection = prompt("What are you going to pick?")
 const compSelection = Math.random()
-prompt("What are you going to pick?")
+
     Game()
 
     function Game() {
@@ -59,8 +59,37 @@ prompt("What are you going to pick?")
 
         }
 
+        if (compSelection <= 0.400 & userSelection === "paper" ) {
+
+            win.textContent = 
+            "You Win!"
+
+        }
+
+        else if (compSelection  <= 0.700 & compSelection >= 0.4001 & userSelection === "scissors" ) {
 
 
+            win.textContent = 
+            "You Win"
+
+
+
+
+        }
+
+        else if (compSelection <= 1 & compSelection >= 0.7001 & userSelection === "rock" ) {
+
+
+            win.textContent = 
+            "You Win"
+
+
+
+        }
+
+        else
+            win.textContent =
+            "You Either Tied or Lost Refrest To Try Again."
     }
 
 
